@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+}
+ul,ol,li{
+    list-style: none;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+a{
+    display: block;
+    text-decoration: none;
+    color:inherit;
+}
+.container{
+    width: 1824px;
+    
+    margin: 0 auto;
+}

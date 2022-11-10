@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <script src="./js/jquery-1.12.4.js"></script>
+    <script src="./js/fullpage.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrap">
+        <section class="section banner">
+            <header class="header-area">
+                <div class="container">
+                    <div class="hamburger">
+                        <!-- <input type="checkbox" id="trigger">
+                        <label for="trigger" class="trigger-b"> -->
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        <!-- </label> -->
+                    </div>
+                    <div class="logo">
+                        <svg width="219" height="63" viewBox="0 0 219 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.3371 14.9663C8.82023 15.7528 7.52809 16.3708 7.47191 16.3708C7.35955 16.3708 7.30337 15.8652 7.30337 15.2472C7.30337 14.2359 6.91011 14.1236 3.65169 14.1236H0V31.8202V49.5168H3.8764H7.80899L7.97753 37.5506C8.14607 26.2022 8.20225 25.5281 9.4382 23.8427C12.0787 20.1348 17.9775 20.1348 20.2247 23.8427C21.236 25.4719 21.3483 26.764 21.3483 37.5506V49.5168H25.5618H29.7753V37.4382V25.3595L31.6854 23.2247C33.427 21.3708 33.9326 21.1461 36.4045 21.1461C39.7753 21.1461 41.7978 22.7191 42.6966 25.8652C42.9775 26.9888 43.2584 32.7753 43.2584 38.6741V49.5168H47.2472H51.1798L51.0112 35.9213C50.8427 23.2247 50.7865 22.1011 49.6067 20.0225C47.191 15.4719 43.7079 13.5618 38.0899 13.5618C34.3258 13.5618 30.5056 14.9101 28.3146 16.9888L27.0787 18.1123L25.618 16.6517C22.191 13.2247 15.2809 12.4382 10.3371 14.9663Z" fill="#B80120"/>
+                            <path d="M66.1236 14.4045C63.6517 15.3033 58.7078 18.8427 58.2584 19.9101C58.0899 20.3595 58.9887 21.8764 60.2247 23.3371L62.5281 25.9775L64.2696 24.2921C69.1573 19.5168 77.191 19.9101 78.5393 24.9101C78.8202 25.9213 78.9326 26.9326 78.8202 27.1573C78.7078 27.4382 76.9663 27.6067 74.9438 27.6067C66.7416 27.6067 60 30.4719 57.6966 34.9101C56.2921 37.6629 56.573 43 58.3708 45.4719C60.5618 48.5618 63.5955 49.7977 69.1011 49.7977C73.2584 49.7977 74.2135 49.6292 76.6292 48.2809C78.1461 47.382 79.4382 46.7078 79.5505 46.7078C79.6629 46.7078 79.7753 47.3258 79.7753 48.1123C79.7753 49.573 79.8314 49.573 83.5955 49.4045L87.3595 49.2359V36.8764C87.3595 26.3146 87.191 24.1236 86.3483 21.8764C85.1123 18.6741 81.2359 14.9663 78.3146 14.1797C75.2809 13.3371 68.7078 13.5056 66.1236 14.4045ZM78.764 35.7528C78.4831 38.5618 76.7416 41.3146 74.382 42.6067C68.8202 45.809 62.5843 42.6067 64.6629 37.6629C65.7303 34.9663 68.8764 33.7303 74.4382 33.955L78.9326 34.0674L78.764 35.7528Z" fill="#B80120"/>
+                            <path d="M121.798 14.9101C119.213 16.2584 119.101 16.3146 119.101 15.2472C119.101 14.2359 118.708 14.1236 115.169 14.1236H111.236V31.8202V49.573L115.337 49.4045L119.382 49.2359L119.663 37.1573C119.944 23.955 120.112 23.2809 123.371 21.7078C126.91 20.0224 130.674 21.146 132.416 24.4045C133.258 25.9213 133.427 28 133.596 37.8314L133.764 49.5168H137.697H141.629L141.461 36.146C141.292 23.1123 141.236 22.7191 139.831 20.0224C138.989 18.337 137.472 16.5393 136.011 15.528C133.876 14.0674 133.034 13.8427 129.045 13.6741C125 13.5056 124.101 13.6741 121.798 14.9101Z" fill="#B80120"/>
+                            <path d="M192.416 15.191C181.067 20.5281 178.483 35.8651 187.36 44.7977C191.067 48.5056 194.382 49.7977 200 49.7977C204.101 49.7977 205.225 49.573 207.978 48.2247C219.438 42.6067 221.854 27.3258 212.64 18.3932C207.472 13.3932 199.045 12.0449 192.416 15.191ZM205.449 22.7191C207.809 24.2921 210.112 28.7865 210.112 31.764C210.056 34.9663 208.371 38.3932 205.843 40.3033C204.045 41.7078 203.258 41.9326 200.056 41.9326C197.079 41.9326 196.011 41.6517 194.494 40.6404C189.719 37.2135 188.876 28.6741 192.865 24.2921C196.067 20.809 201.573 20.0786 205.449 22.7191Z" fill="#B80120"/>
+                            <path d="M145.73 15.1349C145.955 15.6967 148.989 23.2248 152.472 31.8203L158.876 47.4944L157.584 50.0225C155.787 53.6742 154.382 54.6854 151.124 55.0225L148.315 55.3034V58.8427V62.4382H151.966C153.989 62.4382 156.461 62.1012 157.472 61.6517C159.719 60.6967 162.472 57.8315 163.989 54.854C164.831 53.1686 179.382 19.4607 181.292 14.7978C181.517 14.236 180.618 14.1236 177.191 14.236L172.809 14.4045L168.258 25.7528C165.787 31.9888 163.596 37.2135 163.427 37.4382C163.258 37.6068 161.067 32.4944 158.596 26.0899L154.101 14.4045L149.775 14.236C145.73 14.0674 145.449 14.1236 145.73 15.1349Z" fill="#B80120"/>
+                            <path d="M98.0337 16.9326C95.2809 18 94.4382 21.5393 96.3484 23.6741C97.809 25.3033 101.348 25.191 102.472 23.5618C104.888 20.1348 101.685 15.4157 98.0337 16.9326Z" fill="#B80120"/>
+                            <path d="M96.9101 41.8202C93.8764 44.4045 95.3933 48.9551 99.2697 48.9551C104.27 48.9551 104.831 41.9326 99.9438 40.809C98.8764 40.5281 98.0337 40.809 96.9101 41.8202Z" fill="#B80120"/>
+                            </svg>
+                    </div>
+                    <div class="icon-box">
+                        <div class="icon">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M27 31.5001H8.99995C8.00586 31.5001 7.19995 30.6942 7.19995 29.7001V29.0987C7.19995 26.4831 8.8227 24.1419 11.272 23.2239C15.61 21.5981 20.3899 21.5981 24.7279 23.2239C27.1772 24.1419 28.8 26.4831 28.8 29.0987V29.7001C28.8 30.6942 27.994 31.5001 27 31.5001Z"  stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15.2554 17.4903C16.978 18.3751 19.0215 18.3751 20.7441 17.4903C22.3473 16.6668 23.4959 15.1669 23.873 13.4045L23.9736 12.9341C24.3593 11.1319 23.9473 9.25091 22.8438 7.77477L22.6822 7.55864C21.5784 6.08232 19.8431 5.21301 17.9998 5.21301C16.1565 5.21301 14.4211 6.08232 13.3174 7.55864L13.1558 7.77477C12.0522 9.25091 11.6403 11.1319 12.0259 12.9341L12.1266 13.4045C12.5037 15.1669 13.6523 16.6668 15.2554 17.4903Z"  stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                        </div>
+                        <div class="icon">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M30.052 29.8951L24.444 24.2871"  stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6.10985 13.8258C7.11884 10.0601 10.0601 7.11884 13.8258 6.10985C17.5914 5.10086 21.6092 6.17744 24.3659 8.9341C27.1225 11.6907 28.1991 15.7086 27.1901 19.4742C26.1811 23.2398 23.2398 26.1811 19.4742 27.1901C15.7086 28.1991 11.6907 27.1225 8.9341 24.3659C6.17744 21.6092 5.10086 17.5914 6.10985 13.8258Z"  stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                        </div>
+                        <div class="icon">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.7 22.05H28.8L31.95 9.44995H8.55005"  stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M13.0279 27.3613L7.65005 5.84998H4.05005"  stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M11.8809 27.6745C12.6044 27.2568 13.4957 27.2568 14.2192 27.6745C14.9426 28.0922 15.3883 28.8641 15.3883 29.6995C15.3883 30.5349 14.9426 31.3068 14.2192 31.7245C13.4957 32.1422 12.6044 32.1422 11.8809 31.7245C11.1574 31.3068 10.7118 30.5349 10.7118 29.6995C10.7118 28.8641 11.1574 28.0922 11.8809 27.6745Z"  stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M13.6885 27.45H27.2614"  stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M26.7309 27.6745C27.4543 27.2568 28.3457 27.2568 29.0692 27.6745C29.7926 28.0922 30.2383 28.8641 30.2383 29.6995C30.2383 30.5349 29.7926 31.3068 29.0692 31.7245C28.3457 32.1422 27.4543 32.1422 26.7309 31.7245C26.0074 31.3068 25.5618 30.5349 25.5618 29.6995C25.5618 28.8641 26.0074 28.0922 26.7309 27.6745Z"  stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        
+            <!-- 서브메뉴박스 -->
+            <div class="sub-menu-box">
+                <div class="menu-bar-box">
+                    <ul class="menu-bar">
+                        <li>
+                            <a href="#none" class="menu">피부타입별</a>
+                        </li>
+                        <li>
+                            <a href="#none" class="menu">카테고리별</a>
+                        </li>
+                        <li>
+                            <a href="#none" class="menu">라인별</a>
+                        </li>
+                        <li>
+                            <a href="#none" class="menu">신상품</a>
+                        </li>
+                    </ul>
+
+                    <!-- 이런상품은 어떠세요?  -->
+                    <p>이런 상품은 어떠세요?</p>
+                    
+                    <div class="new-seller-bar swiper mySwiper">
+                        <div class="new-seller swiper-wrapper">  
+                            <div class="seller-list swiper-slide">                                
+                                    <img src="./image/Rectangle 13.png" alt="">
+                            </div>
+                            <div class="seller-list swiper-slide">
+                                    <img src="./image/Rectangle 14.png" alt="">
+                            </div>
+                            <div class="seller-list swiper-slide">
+                                    <img src="./image/Rectangle 15.png" alt="">
+                            </div>
+                        </div>                 
+
+                    <!-- 버튼 영역 -->
+                        <div class="round-btn swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="banner slider-wrap swiper mySwiper">
+                <div class="auto-slider swiper-wrapper">
+                    <div class="slider slider-1 swiper-slide">
+                        <!-- <img src="./image/banner1.png" alt=""> -->
+                    </div>
+                    <div class="slider slider-2 swiper-slide">
+                        <!-- <img src="./image/banner2.png" alt=""> -->
+                    </div>
+                    <div class="slider slider-3 swiper-slide">
+                        <!-- <img src="./image/banner3.png" alt=""> -->
+                    </div>
+                    <div class="slider slider-4 swiper-slide">
+                        <!-- <img src="./image/banner4.png" alt=""> -->
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div> 
+                <div class="swiper-pagination"></div>         
+            </div>
+        </section>
+
+        <section class="section vertivcal_bottom_wrap">
+            <div class="bottom_wrap">
+                <div class="vertical_bottom vertical_left">
+                <h2 class="vertical_title">Best Seller</h2>
+                <a href="#none" class="vertical_btn">더보기</a>
+                </div>
+                <div class="vertical_bottom vertical_right">
+                    <div class="vertical">
+                        <div class="vertical_slider-wrap vertical_swiper swiper mySwiper">
+                            <div class="auto-slider swiper-wrapper">
+                                <div class="vertical_slider vertical_slider-1 swiper-slide">
+                                <div class="vertical_img">
+                                    <img src="./image/vertical_1.png" alt="">
+                                </div>
+                                <div class="vertical_txt_wrap">
+                                    <div class="vertical-txt vertical_txt_left">
+                                        <p>비피다 바이옴 콤플렉스
+                                            <br>앰플 50ml(+증정)</p>
+                                    </div>
+                                    <div class="vertical-txt vartical_txt_right">
+                                        <p class="delete-txt">35,000</p>
+                                        <p class="v-txt">19,900</p>
+                                        <p class="sale">43%</p>
+                                    </div>
+                                </div>
+                                <a href="#none" class="cart-btn">
+                                    <p>cart</p>
+                                    <div class="vertical-heart">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                                        <path d="M17.8776 10.7678L16.6048 9.49501C15.4233 8.31353 13.8209 7.64978 12.15 7.64978C10.4792 7.64978 8.87671 8.31353 7.69523 9.49501C6.51376 10.6765 5.85001 12.2789 5.85001 13.9498C5.85001 15.6206 6.51376 17.2231 7.69523 18.4046L14.0316 24.7409C14.0407 24.7501 14.0499 24.7594 14.0591 24.7686L17.2411 27.9506C17.4169 28.1263 17.6472 28.2142 17.8776 28.2142" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M17.8776 10.7677L19.1503 9.49501C20.3318 8.31353 21.9343 7.64978 23.6051 7.64978C25.276 7.64978 26.8784 8.31353 28.0599 9.49501C29.2414 10.6765 29.9051 12.2789 29.9051 13.9498C29.9051 15.6206 29.2414 17.2231 28.0599 18.4046L18.5139 27.9505C18.3382 28.1262 18.1079 28.2141 17.8776 28.2141"  stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </a>
+                                </div>
+                                <div class="vertical_slider vertical_slider-2 swiper-slide">
+                                <div class="vertical_img">
+                                    <img src="./image/vertical_2.png" alt="">
+                                </div>
+                                <div class="vertical_txt_wrap">
+                                    <div class="vertical-txt vertical_txt_left">
+                                        <p>갈락 나이아신 2.0 
+                                            <br>에센스 50ml (+증정)</p>
+                                    </div>
+                                    <div class="vertical-txt vartical_txt_right">
+                                        <p class="delete-txt">29,000</p>
+                                        <p class="v-txt">15,900</p>
+                                        <p class="sale">45%</p>
+                                    </div>
+                                </div>
+                                <a href="#none" class="cart-btn">
+                                    <p>cart</p>
+                                    <div class="vertical-heart">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                                        <path d="M17.8776 10.7678L16.6048 9.49501C15.4233 8.31353 13.8209 7.64978 12.15 7.64978C10.4792 7.64978 8.87671 8.31353 7.69523 9.49501C6.51376 10.6765 5.85001 12.2789 5.85001 13.9498C5.85001 15.6206 6.51376 17.2231 7.69523 18.4046L14.0316 24.7409C14.0407 24.7501 14.0499 24.7594 14.0591 24.7686L17.2411 27.9506C17.4169 28.1263 17.6472 28.2142 17.8776 28.2142" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M17.8776 10.7677L19.1503 9.49501C20.3318 8.31353 21.9343 7.64978 23.6051 7.64978C25.276 7.64978 26.8784 8.31353 28.0599 9.49501C29.2414 10.6765 29.9051 12.2789 29.9051 13.9498C29.9051 15.6206 29.2414 17.2231 28.0599 18.4046L18.5139 27.9505C18.3382 28.1262 18.1079 28.2141 17.8776 28.2141"  stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </a>
+                                </div>
+                                <div class="vertical_slider vertical_slider-3 swiper-slide">
+                                <div class="vertical_img">
+                                    <img src="./image/vertical_3.png" alt="">
+                                </div>
+                                <div class="vertical_txt_wrap">
+                                    <div class="vertical-txt vertical_txt_left">
+                                        <p>퓨어 클렌징 오일
+                                            <br>200ml</p>
+                                    </div>
+                                    <div class="vertical-txt vartical_txt_right">
+                                        <p class="delete-txt">29,000</p>
+                                        <p class="v-txt">17,500</p>
+                                        <p class="sale">40%</p>
+                                    </div>
+                                </div>
+                                <a href="#none" class="cart-btn">
+                                    <p>cart</p>
+                                    <div class="vertical-heart">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                                        <path d="M17.8776 10.7678L16.6048 9.49501C15.4233 8.31353 13.8209 7.64978 12.15 7.64978C10.4792 7.64978 8.87671 8.31353 7.69523 9.49501C6.51376 10.6765 5.85001 12.2789 5.85001 13.9498C5.85001 15.6206 6.51376 17.2231 7.69523 18.4046L14.0316 24.7409C14.0407 24.7501 14.0499 24.7594 14.0591 24.7686L17.2411 27.9506C17.4169 28.1263 17.6472 28.2142 17.8776 28.2142" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M17.8776 10.7677L19.1503 9.49501C20.3318 8.31353 21.9343 7.64978 23.6051 7.64978C25.276 7.64978 26.8784 8.31353 28.0599 9.49501C29.2414 10.6765 29.9051 12.2789 29.9051 13.9498C29.9051 15.6206 29.2414 17.2231 28.0599 18.4046L18.5139 27.9505C18.3382 28.1262 18.1079 28.2141 17.8776 28.2141"  stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </a>
+                                </div>
+                                <div class="vertical_slider vertical_slider-4 swiper-slide">
+                                <div class="vertical_img">
+                                    <img src="./image/vertical_4.png" alt="">
+                                </div>
+                                <div class="vertical_txt_wrap">
+                                    <div class="vertical-txt vertical_txt_left">
+                                        <p>비피다 바이옴 컨센트레이트 
+                                            <br>크림 50ml</p>
+                                    </div>
+                                    <div class="vertical-txt vartical_txt_right">
+                                        <p class="delete-txt">40,000</p>
+                                        <p class="v-txt">20,000</p>
+                                        <p class="sale">50%</p>
+                                    </div>
+                                </div>
+                                <a href="#none" class="cart-btn">
+                                    <p>cart</p>
+                                    <div class="vertical-heart">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                                        <path d="M17.8776 10.7678L16.6048 9.49501C15.4233 8.31353 13.8209 7.64978 12.15 7.64978C10.4792 7.64978 8.87671 8.31353 7.69523 9.49501C6.51376 10.6765 5.85001 12.2789 5.85001 13.9498C5.85001 15.6206 6.51376 17.2231 7.69523 18.4046L14.0316 24.7409C14.0407 24.7501 14.0499 24.7594 14.0591 24.7686L17.2411 27.9506C17.4169 28.1263 17.6472 28.2142 17.8776 28.2142" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M17.8776 10.7677L19.1503 9.49501C20.3318 8.31353 21.9343 7.64978 23.6051 7.64978C25.276 7.64978 26.8784 8.31353 28.0599 9.49501C29.2414 10.6765 29.9051 12.2789 29.9051 13.9498C29.9051 15.6206 29.2414 17.2231 28.0599 18.4046L18.5139 27.9505C18.3382 28.1262 18.1079 28.2141 17.8776 28.2141"  stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </a>
+                                </div>
+                                <div class="vertical_slider vertical_slider-5 swiper-slide">
+                                <div class="vertical_img">
+                                    <img src="./image/vertical_5.png" alt="">
+                                </div>
+                                <div class="vertical_txt_wrap">
+                                    <div class="vertical-txt vertical_txt_left">
+                                        <p>비피다 바이옴 앰플 토너<br>400ml(+손수건 증정)</p>
+                                    </div>
+                                    <div class="vertical-txt vartical_txt_right">
+                                        <p class="delete-txt">25,000</p>
+                                        <p class="v-txt">13,000</p>
+                                        <p class="sale">48%</p>
+                                    </div>
+                                </div>
+                                <a href="#none" class="cart-btn">
+                                    <p>cart</p>
+                                    <div class="vertical-heart">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                                        <path d="M17.8776 10.7678L16.6048 9.49501C15.4233 8.31353 13.8209 7.64978 12.15 7.64978C10.4792 7.64978 8.87671 8.31353 7.69523 9.49501C6.51376 10.6765 5.85001 12.2789 5.85001 13.9498C5.85001 15.6206 6.51376 17.2231 7.69523 18.4046L14.0316 24.7409C14.0407 24.7501 14.0499 24.7594 14.0591 24.7686L17.2411 27.9506C17.4169 28.1263 17.6472 28.2142 17.8776 28.2142" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M17.8776 10.7677L19.1503 9.49501C20.3318 8.31353 21.9343 7.64978 23.6051 7.64978C25.276 7.64978 26.8784 8.31353 28.0599 9.49501C29.2414 10.6765 29.9051 12.2789 29.9051 13.9498C29.9051 15.6206 29.2414 17.2231 28.0599 18.4046L18.5139 27.9505C18.3382 28.1262 18.1079 28.2141 17.8776 28.2141"  stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </a>
+                                </div>
+                                <div class="vertical_slider vertical_slider-6 swiper-slide">
+                                <div class="vertical_img">
+                                    <img src="./image/vertical_6.png" alt="">
+                                </div>
+                                <div class="vertical_txt_wrap">
+                                    <div class="vertical-txt vertical_txt_left">
+                                        <p>갈락토미 클리어스킨 토너<br>210ml(+손수건 증정)</p>
+                                    </div>
+                                    <div class="vertical-txt vartical_txt_right">
+                                        <p class="delete-txt">29,000</p>
+                                        <p class="v-txt">15,080</p>
+                                        <p class="sale">48%</p>
+                                    </div>
+                                </div>
+                                <a href="#none" class="cart-btn">
+                                    <p>cart</p>
+                                    <div class="vertical-heart">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                                        <path d="M17.8776 10.7678L16.6048 9.49501C15.4233 8.31353 13.8209 7.64978 12.15 7.64978C10.4792 7.64978 8.87671 8.31353 7.69523 9.49501C6.51376 10.6765 5.85001 12.2789 5.85001 13.9498C5.85001 15.6206 6.51376 17.2231 7.69523 18.4046L14.0316 24.7409C14.0407 24.7501 14.0499 24.7594 14.0591 24.7686L17.2411 27.9506C17.4169 28.1263 17.6472 28.2142 17.8776 28.2142" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M17.8776 10.7677L19.1503 9.49501C20.3318 8.31353 21.9343 7.64978 23.6051 7.64978C25.276 7.64978 26.8784 8.31353 28.0599 9.49501C29.2414 10.6765 29.9051 12.2789 29.9051 13.9498C29.9051 15.6206 29.2414 17.2231 28.0599 18.4046L18.5139 27.9505C18.3382 28.1262 18.1079 28.2141 17.8776 28.2141"  stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </a>
+                                </div>
+                                <div class="vertical_slider vertical_slider-7 swiper-slide">
+                                <div class="vertical_img">
+                                    <img src="./image/vertical_7.png" alt="">
+                                </div>
+                                <div class="vertical_txt_wrap">
+                                    <div class="vertical-txt vertical_txt_left">
+                                        <p>갈락 나이아신 에센스 <br>패드 80매</p>
+                                    </div>
+                                    <div class="vertical-txt vartical_txt_right">
+                                        <p class="delete-txt">28,000</p>
+                                        <p class="v-txt">18,200</p>
+                                        <p class="sale">35%</p>
+                                    </div>
+                                </div>
+                                <a href="#none" class="cart-btn">
+                                    <p>cart</p>
+                                    <div class="vertical-heart">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                                        <path d="M17.8776 10.7678L16.6048 9.49501C15.4233 8.31353 13.8209 7.64978 12.15 7.64978C10.4792 7.64978 8.87671 8.31353 7.69523 9.49501C6.51376 10.6765 5.85001 12.2789 5.85001 13.9498C5.85001 15.6206 6.51376 17.2231 7.69523 18.4046L14.0316 24.7409C14.0407 24.7501 14.0499 24.7594 14.0591 24.7686L17.2411 27.9506C17.4169 28.1263 17.6472 28.2142 17.8776 28.2142" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M17.8776 10.7677L19.1503 9.49501C20.3318 8.31353 21.9343 7.64978 23.6051 7.64978C25.276 7.64978 26.8784 8.31353 28.0599 9.49501C29.2414 10.6765 29.9051 12.2789 29.9051 13.9498C29.9051 15.6206 29.2414 17.2231 28.0599 18.4046L18.5139 27.9505C18.3382 28.1262 18.1079 28.2141 17.8776 28.2141"  stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </a>
+                                </div>
+                                <div class="vertical_slider vertical_slider-8 swiper-slide">
+                                <div class="vertical_img">
+                                    <img src="./image/vertical_8.png" alt="">
+                                </div>
+                                <div class="vertical_txt_wrap">
+                                    <div class="vertical-txt vertical_txt_left">
+                                        <p>갈락토미 클리어스킨 패드 <br>60매(+손수건 증정)</p>
+                                    </div>
+                                    <div class="vertical-txt vartical_txt_right">
+                                        <p class="delete-txt">22,000</p>
+                                        <p class="v-txt">11,440</p>
+                                        <p class="sale">48%</p>
+                                    </div>
+                                </div>
+                                <a href="#none" class="cart-btn">
+                                    <p>cart</p>
+                                    <div class="vertical-heart">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                                        <path d="M17.8776 10.7678L16.6048 9.49501C15.4233 8.31353 13.8209 7.64978 12.15 7.64978C10.4792 7.64978 8.87671 8.31353 7.69523 9.49501C6.51376 10.6765 5.85001 12.2789 5.85001 13.9498C5.85001 15.6206 6.51376 17.2231 7.69523 18.4046L14.0316 24.7409C14.0407 24.7501 14.0499 24.7594 14.0591 24.7686L17.2411 27.9506C17.4169 28.1263 17.6472 28.2142 17.8776 28.2142" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M17.8776 10.7677L19.1503 9.49501C20.3318 8.31353 21.9343 7.64978 23.6051 7.64978C25.276 7.64978 26.8784 8.31353 28.0599 9.49501C29.2414 10.6765 29.9051 12.2789 29.9051 13.9498C29.9051 15.6206 29.2414 17.2231 28.0599 18.4046L18.5139 27.9505C18.3382 28.1262 18.1079 28.2141 17.8776 28.2141"  stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </a>
+                                </div>
+                                <div class="vertical_slider vertical_slider-9 swiper-slide">
+                                <div class="vertical_img">
+                                    <img src="./image/vertical_9.png" alt="">
+                                </div>
+                                <div class="vertical_txt_wrap">
+                                    <div class="vertical-txt vertical_txt_left">
+                                        <p>아워 비건 어성초 98 <br>시카 세럼 100ml</p>
+                                    </div>
+                                    <div class="vertical-txt vartical_txt_right">
+                                        <p class="delete-txt">20,000</p>
+                                        <p class="v-txt">11,000</p>
+                                        <p class="sale">45%</p>
+                                    </div>
+                                </div>
+                                <a href="#none" class="cart-btn">
+                                    <p>cart</p>
+                                    <div class="vertical-heart">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                                        <path d="M17.8776 10.7678L16.6048 9.49501C15.4233 8.31353 13.8209 7.64978 12.15 7.64978C10.4792 7.64978 8.87671 8.31353 7.69523 9.49501C6.51376 10.6765 5.85001 12.2789 5.85001 13.9498C5.85001 15.6206 6.51376 17.2231 7.69523 18.4046L14.0316 24.7409C14.0407 24.7501 14.0499 24.7594 14.0591 24.7686L17.2411 27.9506C17.4169 28.1263 17.6472 28.2142 17.8776 28.2142" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M17.8776 10.7677L19.1503 9.49501C20.3318 8.31353 21.9343 7.64978 23.6051 7.64978C25.276 7.64978 26.8784 8.31353 28.0599 9.49501C29.2414 10.6765 29.9051 12.2789 29.9051 13.9498C29.9051 15.6206 29.2414 17.2231 28.0599 18.4046L18.5139 27.9505C18.3382 28.1262 18.1079 28.2141 17.8776 28.2141"  stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </a>
+                                </div>
+                                <div class="vertical_slider vertical_slider-10 swiper-slide">
+                                <div class="vertical_img">
+                                    <img src="./image/vertical_10.png" alt="">
+                                </div>
+                                <div class="vertical_txt_wrap">
+                                    <div class="vertical-txt vertical_txt_left">
+                                        <p>갈락 화이트닝 비타 <br>세럼 50ml</p>
+                                    </div>
+                                    <div class="vertical-txt vartical_txt_right">
+                                        <p class="delete-txt"></p>
+                                        <p class="v-txt">19,000</p>
+                                        <p class="sale"></p>
+                                    </div>
+                                </div>
+                                <a href="#none" class="cart-btn">
+                                    <p>cart</p>
+                                    <div class="vertical-heart">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                                        <path d="M17.8776 10.7678L16.6048 9.49501C15.4233 8.31353 13.8209 7.64978 12.15 7.64978C10.4792 7.64978 8.87671 8.31353 7.69523 9.49501C6.51376 10.6765 5.85001 12.2789 5.85001 13.9498C5.85001 15.6206 6.51376 17.2231 7.69523 18.4046L14.0316 24.7409C14.0407 24.7501 14.0499 24.7594 14.0591 24.7686L17.2411 27.9506C17.4169 28.1263 17.6472 28.2142 17.8776 28.2142" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M17.8776 10.7677L19.1503 9.49501C20.3318 8.31353 21.9343 7.64978 23.6051 7.64978C25.276 7.64978 26.8784 8.31353 28.0599 9.49501C29.2414 10.6765 29.9051 12.2789 29.9051 13.9498C29.9051 15.6206 29.2414 17.2231 28.0599 18.4046L18.5139 27.9505C18.3382 28.1262 18.1079 28.2141 17.8776 28.2141"  stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </a>
+                                </div>
+                                <div class="vertical_slider vertical_slider-11 swiper-slide">
+                                    <div class="vertical_img">
+                                        <img src="./image/vertical_11.png" alt="">
+                                    </div>
+                                    <div class="vertical_txt_wrap">
+                                        <div class="vertical-txt vertical_txt_left">
+                                            <p>비피다 바이옴 아쿠아 <br>베리어 크림 80ml</p>
+                                        </div>
+                                        <div class="vertical-txt vartical_txt_right">
+                                            <p class="delete-txt">24,500</p>
+                                            <p class="v-txt">12,250</p>
+                                            <p class="sale">50%</p>
+                                        </div>
+                                    </div>
+                                    <a href="#none" class="cart-btn">
+                                        <p>cart</p>
+                                        <div class="vertical-heart">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                                            <path d="M17.8776 10.7678L16.6048 9.49501C15.4233 8.31353 13.8209 7.64978 12.15 7.64978C10.4792 7.64978 8.87671 8.31353 7.69523 9.49501C6.51376 10.6765 5.85001 12.2789 5.85001 13.9498C5.85001 15.6206 6.51376 17.2231 7.69523 18.4046L14.0316 24.7409C14.0407 24.7501 14.0499 24.7594 14.0591 24.7686L17.2411 27.9506C17.4169 28.1263 17.6472 28.2142 17.8776 28.2142" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M17.8776 10.7677L19.1503 9.49501C20.3318 8.31353 21.9343 7.64978 23.6051 7.64978C25.276 7.64978 26.8784 8.31353 28.0599 9.49501C29.2414 10.6765 29.9051 12.2789 29.9051 13.9498C29.9051 15.6206 29.2414 17.2231 28.0599 18.4046L18.5139 27.9505C18.3382 28.1262 18.1079 28.2141 17.8776 28.2141"  stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="vertical_slider vertical_slider-12 swiper-slide">
+                                    <div class="vertical_img">
+                                        <img src="./image/vertical_12.png" alt="">
+                                    </div>
+                                    <div class="vertical_txt_wrap">
+                                        <div class="vertical-txt vertical_txt_left">
+                                            <p>갈락토미 에센스 <br>크림 50ml</p>
+                                        </div>
+                                        <div class="vertical-txt vartical_txt_right">
+                                            <p class="delete-txt">35,000</p>
+                                            <p class="v-txt">24,500</p>
+                                            <p class="sale">30%</p>
+                                        </div>
+                                    </div>
+                                    <a href="#none" class="cart-btn">
+                                        <p>cart</p>
+                                        <div class="vertical-heart">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                                            <path d="M17.8776 10.7678L16.6048 9.49501C15.4233 8.31353 13.8209 7.64978 12.15 7.64978C10.4792 7.64978 8.87671 8.31353 7.69523 9.49501C6.51376 10.6765 5.85001 12.2789 5.85001 13.9498C5.85001 15.6206 6.51376 17.2231 7.69523 18.4046L14.0316 24.7409C14.0407 24.7501 14.0499 24.7594 14.0591 24.7686L17.2411 27.9506C17.4169 28.1263 17.6472 28.2142 17.8776 28.2142" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M17.8776 10.7677L19.1503 9.49501C20.3318 8.31353 21.9343 7.64978 23.6051 7.64978C25.276 7.64978 26.8784 8.31353 28.0599 9.49501C29.2414 10.6765 29.9051 12.2789 29.9051 13.9498C29.9051 15.6206 29.2414 17.2231 28.0599 18.4046L18.5139 27.9505C18.3382 28.1262 18.1079 28.2141 17.8776 28.2141"  stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="vertical-btn-n swiper-button-next"></div>
+                            <div class="vertical-btn-p swiper-button-prev"></div> 
+                            <!-- <div class="swiper-pagination"></div>          -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section more_view">
+            <div class="container">
+                <div class="more_img">
+                    <img src="./image/Rectangle 37.png" alt="">
+                </div>
+                <div class="view_title">
+                    <p>갈락 나이아신 2.0 에센스</p>
+                    <h4>한결같이 투명 미백 광채</h4>
+                    <span>#2주미백<br>
+                        #미백광채</span>
+                    <a href="#none" class="more">SHOP NOW</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section main_slide_view ">
+            <div class="img_slide swiper mySwiper">
+                <div class="img_box swiper-wrapper">
+                    <div class="img swiper-slide">
+                        <img src="./image/event_view_banner_20221004080114.jpg" alt="">
+                    </div>
+                    <div class="img swiper-slide">
+                        <img src="./image/event_view_banner_20221004080158.jpg" alt="">
+                    </div>
+                    <div class="img swiper-slide">
+                        <img src="./image/event_view_banner_20221004080254.jpg" alt="">
+                    </div>
+                    <div class="img swiper-slide">
+                        <img src="./image/event_view_banner_20221004080508.jpg" alt="">
+                    </div>
+                    <div class="img swiper-slide">
+                        <img src="./image/event_view_banner_20221004080610.jpg" alt="">
+                    </div>
+                </div>
+                <!-- <div class="img-slide-n swiper-button-next"></div> -->
+                <!-- <div class="img-slide-p swiper-button-prev"></div> -->
+                <!-- <div class="img-slide-pagination swiper-pagination"></div> -->
+            </div>
+
+            <div class="auto_play">
+                <div class="play">
+                    <svg class="img-slide-p"  width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.7826 12.5999L16.0986 17.284C15.7031 17.6794 15.7031 18.3204 16.0986 18.7159L20.7826 23.3999"  stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+                    <span class="img-slide-pagination">1/5</span>
+
+                    <div class="stick_wrap">
+                        <!-- <span class="shot"></span>
+                        <span class="long"></span> -->
+                    </div>
+
+                    <svg class="img-slide-n" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.2174 23.4001L19.9014 18.716C20.2969 18.3206 20.2969 17.6796 19.9014 17.2841L15.2174 12.6001"  stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+
+                    <svg class="stop" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="15" y="12" width="2" height="12" fill="white"/>
+                        <rect x="19" y="12" width="2" height="12" fill="white"/>
+                    </svg>
+                    <!-- <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M33.0003 49.1345L33.0003 30.7913C33.0003 29.0095 35.1546 28.1172 36.4145 29.3771L45.5861 38.5487C46.3671 39.3297 46.3671 40.596 45.5861 41.3771L36.4145 50.5487C35.1546 51.8086 33.0003 50.9163 33.0003 49.1345Z" 
+                        stroke="#C2CCDE" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg> -->
+                        
+                </div>
+            </div>
+        </section>
+
+        <div class="move_image">
+            <div class="container">
+                <div class="move-t">    
+                    <div class="move move1">  
+                        <img src="./image/Rectangle 48.png" alt="">
+                    </div>
+                    <div class="move move2">
+                        <img src="./image/Rectangle 53.png" alt="">
+                    </div>
+                    <div class="move move3">
+                        <img src="./image/Rectangle 49.png" alt="">
+                    </div>
+                    <div class="move move4">
+                        <img src="./image/Rectangle 52.png" alt="">
+                    </div>
+                </div>
+                <div class="move-b move5">
+                    <img src="./image/Rectangle 51.png" alt="">
+                </div>
+            </div>
+        </div>
+
+
+        <footer>
+            <div class="container">
+                <div class="f-top">
+                    <div class="f-logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="219" height="63" viewBox="0 0 219 63" fill="none">
+                            <path d="M10.3371 14.9665C8.82023 15.753 7.52809 16.371 7.47191 16.371C7.35955 16.371 7.30337 15.8654 7.30337 15.2474C7.30337 14.2362 6.91011 14.1238 3.65169 14.1238H0V31.8205V49.5171H3.8764H7.80899L7.97753 37.5508C8.14607 26.2025 8.20225 25.5283 9.4382 23.8429C12.0787 20.1351 17.9775 20.1351 20.2247 23.8429C21.236 25.4721 21.3483 26.7643 21.3483 37.5508V49.5171H25.5618H29.7753V37.4384V25.3598L31.6854 23.225C33.427 21.371 33.9326 21.1463 36.4045 21.1463C39.7753 21.1463 41.7978 22.7193 42.6966 25.8654C42.9775 26.989 43.2584 32.7755 43.2584 38.6744V49.5171H47.2472H51.1798L51.0112 35.9216C50.8427 23.225 50.7865 22.1014 49.6067 20.0227C47.191 15.4721 43.7079 13.562 38.0899 13.562C34.3258 13.562 30.5056 14.9103 28.3146 16.989L27.0787 18.1126L25.618 16.6519C22.191 13.2249 15.2809 12.4384 10.3371 14.9665Z" fill="white"/>
+                            <path d="M66.1236 14.4046C63.6517 15.3035 58.7079 18.8428 58.2584 19.9102C58.0899 20.3596 58.9888 21.8765 60.2247 23.3372L62.5281 25.9776L64.2697 24.2922C69.1573 19.517 77.191 19.9102 78.5393 24.9102C78.8202 25.9214 78.9326 26.9327 78.8202 27.1574C78.7079 27.4383 76.9663 27.6068 74.9438 27.6068C66.7416 27.6068 60 30.472 57.6966 34.9102C56.2921 37.663 56.573 43.0001 58.3708 45.472C60.5618 48.5619 63.5955 49.7979 69.1011 49.7979C73.2584 49.7979 74.2135 49.6293 76.6292 48.281C78.1461 47.3821 79.4382 46.708 79.5506 46.708C79.6629 46.708 79.7753 47.3259 79.7753 48.1125C79.7753 49.5731 79.8315 49.5731 83.5955 49.4046L87.3596 49.2361V36.8765C87.3596 26.3147 87.191 24.1237 86.3483 21.8765C85.1124 18.6743 81.236 14.9664 78.3146 14.1799C75.2809 13.3372 68.7079 13.5057 66.1236 14.4046ZM78.7641 35.7529C78.4832 38.5619 76.7416 41.3147 74.382 42.6068C68.8202 45.8091 62.5843 42.6068 64.6629 37.663C65.7303 34.9664 68.8764 33.7304 74.4382 33.9552L78.9326 34.0675L78.7641 35.7529Z" fill="white"/>
+                            <path d="M121.798 14.9103C119.213 16.2586 119.101 16.3148 119.101 15.2474C119.101 14.2362 118.708 14.1238 115.169 14.1238H111.236V31.8204V49.5732L115.337 49.4047L119.382 49.2362L119.663 37.1575C119.944 23.9553 120.112 23.2811 123.371 21.7081C126.91 20.0227 130.674 21.1463 132.416 24.4047C133.258 25.9216 133.427 28.0002 133.596 37.8317L133.764 49.5171H137.697H141.629L141.461 36.1463C141.292 23.1126 141.236 22.7193 139.831 20.0227C138.989 18.3373 137.472 16.5395 136.011 15.5283C133.876 14.0676 133.034 13.8429 129.045 13.6744C125 13.5058 124.101 13.6744 121.798 14.9103Z" fill="white"/>
+                            <path d="M192.416 15.1911C181.067 20.5282 178.483 35.8653 187.36 44.7979C191.067 48.5057 194.382 49.7979 200 49.7979C204.101 49.7979 205.225 49.5731 207.978 48.2248C219.438 42.6068 221.854 27.3259 212.64 18.3934C207.472 13.3934 199.045 12.045 192.416 15.1911ZM205.449 22.7192C207.809 24.2922 210.112 28.7866 210.112 31.7641C210.056 34.9664 208.371 38.3934 205.843 40.3035C204.045 41.708 203.258 41.9327 200.056 41.9327C197.079 41.9327 196.011 41.6518 194.494 40.6405C189.719 37.2136 188.876 28.6743 192.865 24.2922C196.067 20.8091 201.573 20.0787 205.449 22.7192Z" fill="white"/>
+                            <path d="M145.73 15.1346C145.955 15.6964 148.989 23.2245 152.472 31.82L158.876 47.4942L157.584 50.0223C155.787 53.6739 154.382 54.6852 151.124 55.0223L148.315 55.3032V58.8425V62.438H151.966C153.989 62.438 156.461 62.1009 157.472 61.6515C159.719 60.6964 162.472 57.8312 163.989 54.8537C164.831 53.1683 179.382 19.4605 181.292 14.7975C181.517 14.2357 180.618 14.1234 177.191 14.2357L172.809 14.4043L168.258 25.7526C165.787 31.9886 163.596 37.2133 163.427 37.438C163.258 37.6065 161.067 32.4942 158.596 26.0897L154.101 14.4043L149.775 14.2357C145.73 14.0672 145.449 14.1234 145.73 15.1346Z" fill="white"/>
+                            <path d="M98.0337 16.9326C95.2809 18 94.4382 21.5393 96.3483 23.6741C97.809 25.3033 101.348 25.191 102.472 23.5618C104.888 20.1348 101.685 15.4157 98.0337 16.9326Z" fill="white"/>
+                            <path d="M96.9101 41.8202C93.8764 44.4045 95.3933 48.9551 99.2697 48.9551C104.27 48.9551 104.831 41.9326 99.9438 40.809C98.8764 40.5281 98.0337 40.809 96.9101 41.8202Z" fill="white"/>
+                            </svg>
+                    </div>
+                    <ui class="f-menu">
+                        <li><a href="#none">개인정보처리방침</a></li>
+                        <li><a href="#none">이용약관</a></li>
+                        <li><a href="#none">이용안내</a></li>
+                        <li><a href="#none">제휴문의</a></li>
+                    </ui>
+                </div>
+
+                <p>대표이사: 유근직주소: 서울특별시 강남구 언주로 609 (팍스타워) 15층, 마녀공장사업자등록번호: 108-86-00365사업자번호조회<br>   
+                    통신판매업신고번호: 제2018-서울강남-01835호개인정보관리자: 최진호메일: manyo_cs@manyo.co.kr고객센터: 02-6013-0855팩스번호: 02-6280-0829</p>
+
+                <p class="copy">COPYRIGHT © MANYOFACTORY ALL RIGHTS RESERVED.</p>
+            </div>
+        </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    
+</body>
+</html>
